@@ -12,6 +12,7 @@
 		C94668981FD181110068FCDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94668961FD181110068FCDD /* Main.storyboard */; };
 		C946689A1FD181110068FCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C94668991FD181110068FCDD /* Assets.xcassets */; };
 		C946689D1FD181110068FCDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C946689B1FD181110068FCDD /* LaunchScreen.storyboard */; };
+		C94668A51FD182120068FCDD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94668A41FD182120068FCDD /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C94668991FD181110068FCDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C946689C1FD181110068FCDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C946689E1FD181110068FCDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C94668A41FD182120068FCDD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				C94668991FD181110068FCDD /* Assets.xcassets */,
 				C946689B1FD181110068FCDD /* LaunchScreen.storyboard */,
 				C946689E1FD181110068FCDD /* Info.plist */,
+				C94668A41FD182120068FCDD /* GameViewController.swift */,
 			);
 			path = AdventCalendarTutorials;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C94668951FD181110068FCDD /* ViewController.swift in Sources */,
+				C94668A51FD182120068FCDD /* GameViewController.swift in Sources */,
 				C94668931FD181110068FCDD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

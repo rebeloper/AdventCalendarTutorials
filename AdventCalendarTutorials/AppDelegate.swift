@@ -6,6 +6,14 @@
 //  Copyright © 2017 Alex Nagy. All rights reserved.
 //
 
+// 568.0
+// 568.0
+// 667.0
+// 736.0
+// 812.0
+// 1024.0
+// 1366.0
+
 import UIKit
 
 @UIApplicationMain
@@ -16,6 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    
+    window = UIWindow()
+    window?.makeKeyAndVisible()
+    
+    let gameViewController = GameViewController()
+    window?.rootViewController = gameViewController
+    
     return true
   }
 
