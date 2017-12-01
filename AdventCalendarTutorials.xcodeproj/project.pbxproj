@@ -13,6 +13,8 @@
 		C946689A1FD181110068FCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C94668991FD181110068FCDD /* Assets.xcassets */; };
 		C946689D1FD181110068FCDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C946689B1FD181110068FCDD /* LaunchScreen.storyboard */; };
 		C94668A51FD182120068FCDD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94668A41FD182120068FCDD /* GameViewController.swift */; };
+		C94668A91FD187CE0068FCDD /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94668A81FD187CE0068FCDD /* Extension.swift */; };
+		C94668AB1FD192B60068FCDD /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94668AA1FD192B60068FCDD /* MainMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C946689C1FD181110068FCDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C946689E1FD181110068FCDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C94668A41FD182120068FCDD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		C94668A81FD187CE0068FCDD /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		C94668AA1FD192B60068FCDD /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				C946689B1FD181110068FCDD /* LaunchScreen.storyboard */,
 				C946689E1FD181110068FCDD /* Info.plist */,
 				C94668A41FD182120068FCDD /* GameViewController.swift */,
+				C94668A81FD187CE0068FCDD /* Extension.swift */,
+				C94668AA1FD192B60068FCDD /* MainMenu.swift */,
 			);
 			path = AdventCalendarTutorials;
 			sourceTree = "<group>";
@@ -139,9 +145,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C94668AB1FD192B60068FCDD /* MainMenu.swift in Sources */,
 				C94668951FD181110068FCDD /* ViewController.swift in Sources */,
 				C94668A51FD182120068FCDD /* GameViewController.swift in Sources */,
 				C94668931FD181110068FCDD /* AppDelegate.swift in Sources */,
+				C94668A91FD187CE0068FCDD /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
