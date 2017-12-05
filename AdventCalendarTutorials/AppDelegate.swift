@@ -31,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let gameViewController = GameViewController()
     window?.rootViewController = gameViewController
     
+    ACTManager.shared.launch()
+    
     return true
   }
 

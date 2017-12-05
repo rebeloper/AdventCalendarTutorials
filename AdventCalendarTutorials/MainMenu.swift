@@ -10,6 +10,6 @@ import SpriteKit
 
 class MainMenu: SKScene {
   override func didMove(to view: SKView) {
-    print(123)
+    
   }
 }
