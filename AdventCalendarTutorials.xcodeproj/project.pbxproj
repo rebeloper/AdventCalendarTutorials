@@ -16,6 +16,7 @@
 		C94668A91FD187CE0068FCDD /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94668A81FD187CE0068FCDD /* Extension.swift */; };
 		C94668AD1FD194980068FCDD /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94668AC1FD194980068FCDD /* MainMenu.swift */; };
 		C9B021781FD528C5001F5B96 /* ACTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021771FD528C5001F5B96 /* ACTManager.swift */; };
+		C9C453CF1FD9408400C90786 /* BDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C453CE1FD9408400C90786 /* BDButton.swift */; };
 		C9C9572B1FD682BB00CFF9ED /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9572A1FD682BB00CFF9ED /* Gameplay.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		C94668A81FD187CE0068FCDD /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		C94668AC1FD194980068FCDD /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		C9B021771FD528C5001F5B96 /* ACTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACTManager.swift; sourceTree = "<group>"; };
+		C9C453CE1FD9408400C90786 /* BDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDButton.swift; sourceTree = "<group>"; };
 		C9C9572A1FD682BB00CFF9ED /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				C94668AC1FD194980068FCDD /* MainMenu.swift */,
 				C9B021771FD528C5001F5B96 /* ACTManager.swift */,
 				C9C9572A1FD682BB00CFF9ED /* Gameplay.swift */,
+				C9C453CE1FD9408400C90786 /* BDButton.swift */,
 			);
 			path = AdventCalendarTutorials;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				C9C9572B1FD682BB00CFF9ED /* Gameplay.swift in Sources */,
 				C94668AD1FD194980068FCDD /* MainMenu.swift in Sources */,
 				C94668951FD181110068FCDD /* ViewController.swift in Sources */,
+				C9C453CF1FD9408400C90786 /* BDButton.swift in Sources */,
 				C94668A51FD182120068FCDD /* GameViewController.swift in Sources */,
 				C94668931FD181110068FCDD /* AppDelegate.swift in Sources */,
 				C9B021781FD528C5001F5B96 /* ACTManager.swift in Sources */,
