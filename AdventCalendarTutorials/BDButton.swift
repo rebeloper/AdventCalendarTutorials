@@ -14,9 +14,11 @@ class BDButton: SKNode {
   private var cropNode: SKCropNode
   private var action: () -> Void
   var isEnabled = true
+  var titleLabel: SKLabelNode?
   
-  init(imageNamed: String, buttonAction: @escaping () -> Void) {
+  init(imageNamed: String, title: String? = "", buttonAction: @escaping () -> Void) {
     button = SKSpriteNode(imageNamed: imageNamed)
+    titleLabel = SKLabelNode(text: title)
     
     mask = SKSpriteNode(color: SKColor.black, size: button.size)
     mask.alpha = 0
@@ -42,10 +44,22 @@ class BDButton: SKNode {
   
   func setupNodes() {
     button.zPosition = 0
+    
+    if let titleLabel = titleLabel {
+      titleLabel.fontName = "BubbleGum"
+      titleLabel.fontSize = CGFloat.universalFont(size: 24)
+      titleLabel.fontColor = SKColor.white
+      titleLabel.zPosition = 1
+      titleLabel.horizontalAlignmentMode = .center
+      titleLabel.verticalAlignmentMode = .center
+    }
   }
   
   func addNodes() {
     addChild(button)
+    if let titleLabel = titleLabel {
+      addChild(titleLabel)
+    }
     addChild(cropNode)
   }
   
@@ -96,6 +110,26 @@ class BDButton: SKNode {
     isEnabled = true
     mask.alpha = 0.0
     button.alpha = 1.0
+  }
+  
+  func logAvailableFonts() {
+    for family: String in UIFont.familyNames {
+      print("\(family)")
+      for names: String in UIFont.fontNames(forFamilyName: family) {
+        print("==\(names)")
+      }
+    }
+  }
+  
+  func scaleTo(screenWithPercentage: CGFloat) {
+    let aspectRatio = button.size.height / button.size.width
+    let screenWidth = ScreenSize.width
+    var screenHeight = ScreenSize.heigth
+    if DeviceType.isiPhoneX {
+      screenHeight -= 80.0
+    }
+    button.size.width = screenWidth * screenWithPercentage
+    button.size.height = button.size.width * aspectRatio
   }
   
 }

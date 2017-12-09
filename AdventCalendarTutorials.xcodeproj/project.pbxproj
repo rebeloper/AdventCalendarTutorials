@@ -17,6 +17,7 @@
 		C94668AD1FD194980068FCDD /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94668AC1FD194980068FCDD /* MainMenu.swift */; };
 		C9B021781FD528C5001F5B96 /* ACTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021771FD528C5001F5B96 /* ACTManager.swift */; };
 		C9C453CF1FD9408400C90786 /* BDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C453CE1FD9408400C90786 /* BDButton.swift */; };
+		C9C453D11FD98E2E00C90786 /* Bubblegum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9C453D01FD98E2E00C90786 /* Bubblegum.ttf */; };
 		C9C9572B1FD682BB00CFF9ED /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9572A1FD682BB00CFF9ED /* Gameplay.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		C94668AC1FD194980068FCDD /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		C9B021771FD528C5001F5B96 /* ACTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACTManager.swift; sourceTree = "<group>"; };
 		C9C453CE1FD9408400C90786 /* BDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDButton.swift; sourceTree = "<group>"; };
+		C9C453D01FD98E2E00C90786 /* Bubblegum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bubblegum.ttf; sourceTree = "<group>"; };
 		C9C9572A1FD682BB00CFF9ED /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 		C94668911FD181110068FCDD /* AdventCalendarTutorials */ = {
 			isa = PBXGroup;
 			children = (
+				C9C453D01FD98E2E00C90786 /* Bubblegum.ttf */,
 				C94668921FD181110068FCDD /* AppDelegate.swift */,
 				C94668941FD181110068FCDD /* ViewController.swift */,
 				C94668961FD181110068FCDD /* Main.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				C946689D1FD181110068FCDD /* LaunchScreen.storyboard in Resources */,
 				C946689A1FD181110068FCDD /* Assets.xcassets in Resources */,
+				C9C453D11FD98E2E00C90786 /* Bubblegum.ttf in Resources */,
 				C94668981FD181110068FCDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,3 +31,58 @@ struct DeviceType {
   static let isiPadPro = UIDevice.current.userInterfaceIdiom == .pad && ScreenSize.maxLength == 1366.0
   
 }
+
+public extension CGFloat {
+  public static func universalFont(size: CGFloat) -> CGFloat {
+    if DeviceType.isiPhone4OrLess {
+      return size * 0.6
+    }
+    
+    if DeviceType.isiPhone5 {
+      return size * 0.8
+    }
+    
+    if DeviceType.isiPhone6 {
+      return size * 1.0
+    }
+    
+    if DeviceType.isiPhone6Plus {
+      return size * 1.0
+    }
+    
+    if DeviceType.isiPhoneX {
+      return size * 1.0
+    }
+    
+    if DeviceType.isiPad {
+      return size * 2.1
+    }
+    
+    if DeviceType.isiPadPro {
+      return size * 2.1
+    } else {
+      return size * 1.0
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
