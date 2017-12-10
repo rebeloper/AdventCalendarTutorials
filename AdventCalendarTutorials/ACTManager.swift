@@ -26,6 +26,7 @@ class ACTManager {
     if !UserDefaults.standard.bool(forKey: "isFirstLaunch") {
       
       print("This is our first launch")
+      ACTPlayerStats.shared.setSounds(true)
       
       UserDefaults.standard.set(true, forKey: "isFirstLaunch")
       UserDefaults.standard.synchronize()
@@ -54,7 +55,32 @@ class ACTManager {
     }
   }
   
+  func run(_ fileName: String, onNode: SKNode) {
+    if ACTPlayerStats.shared.getSound() {
+      onNode.run(SKAction.playSoundFileNamed(fileName, waitForCompletion: false))
+    }
+  }
+  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

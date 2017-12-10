@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C932F0421FDBC244002B5C30 /* ACTPlayerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932F0411FDBC244002B5C30 /* ACTPlayerStats.swift */; };
+		C932F0451FDBC35E002B5C30 /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C932F0431FDBC35E002B5C30 /* BackgroundMusic.mp3 */; };
+		C932F0461FDBC35E002B5C30 /* Tap.wav in Resources */ = {isa = PBXBuildFile; fileRef = C932F0441FDBC35E002B5C30 /* Tap.wav */; };
 		C94668931FD181110068FCDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94668921FD181110068FCDD /* AppDelegate.swift */; };
 		C94668951FD181110068FCDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94668941FD181110068FCDD /* ViewController.swift */; };
 		C94668981FD181110068FCDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94668961FD181110068FCDD /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C932F0411FDBC244002B5C30 /* ACTPlayerStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACTPlayerStats.swift; sourceTree = "<group>"; };
+		C932F0431FDBC35E002B5C30 /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic.mp3; sourceTree = "<group>"; };
+		C932F0441FDBC35E002B5C30 /* Tap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Tap.wav; sourceTree = "<group>"; };
 		C946688F1FD181110068FCDD /* AdventCalendarTutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventCalendarTutorials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94668921FD181110068FCDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C94668941FD181110068FCDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +74,8 @@
 		C94668911FD181110068FCDD /* AdventCalendarTutorials */ = {
 			isa = PBXGroup;
 			children = (
+				C932F0431FDBC35E002B5C30 /* BackgroundMusic.mp3 */,
+				C932F0441FDBC35E002B5C30 /* Tap.wav */,
 				C9C453D01FD98E2E00C90786 /* Bubblegum.ttf */,
 				C94668921FD181110068FCDD /* AppDelegate.swift */,
 				C94668941FD181110068FCDD /* ViewController.swift */,
@@ -81,6 +89,7 @@
 				C9B021771FD528C5001F5B96 /* ACTManager.swift */,
 				C9C9572A1FD682BB00CFF9ED /* Gameplay.swift */,
 				C9C453CE1FD9408400C90786 /* BDButton.swift */,
+				C932F0411FDBC244002B5C30 /* ACTPlayerStats.swift */,
 			);
 			path = AdventCalendarTutorials;
 			sourceTree = "<group>";
@@ -144,8 +153,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C932F0461FDBC35E002B5C30 /* Tap.wav in Resources */,
 				C946689D1FD181110068FCDD /* LaunchScreen.storyboard in Resources */,
 				C946689A1FD181110068FCDD /* Assets.xcassets in Resources */,
+				C932F0451FDBC35E002B5C30 /* BackgroundMusic.mp3 in Resources */,
 				C9C453D11FD98E2E00C90786 /* Bubblegum.ttf in Resources */,
 				C94668981FD181110068FCDD /* Main.storyboard in Resources */,
 			);
@@ -164,6 +175,7 @@
 				C9C453CF1FD9408400C90786 /* BDButton.swift in Sources */,
 				C94668A51FD182120068FCDD /* GameViewController.swift in Sources */,
 				C94668931FD181110068FCDD /* AppDelegate.swift in Sources */,
+				C932F0421FDBC244002B5C30 /* ACTPlayerStats.swift in Sources */,
 				C9B021781FD528C5001F5B96 /* ACTManager.swift in Sources */,
 				C94668A91FD187CE0068FCDD /* Extension.swift in Sources */,
 			);
