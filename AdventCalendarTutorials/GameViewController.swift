@@ -10,6 +10,11 @@ import UIKit
 import SpriteKit
 import AVFoundation
 
+let stopBackgroundMusicNotificationName = Notification.Name("stopBackgroundMusicNotificationName")
+let startBackgroundMusicNotificationName = Notification.Name("startBackgroundMusicNotificationName")
+
+let startGameplayNotificationName = Notification.Name("startGameplayNotificationName")
+
 class GameViewController: UIViewController {
   
   let skView: SKView = {
@@ -34,6 +39,8 @@ class GameViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    addNotificationObservers()
+    
     view.addSubview(skView)
     
     skView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -49,6 +56,11 @@ class GameViewController: UIViewController {
     playStopBackgroundMusic()
   }
   
+  func addNotificationObservers() {
+    NotificationCenter.default.addObserver(self, selector: #selector(self.stopBackgroundMusic(_:)), name: stopBackgroundMusicNotificationName, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(self.startBackgroundMusic(_:)), name: startBackgroundMusicNotificationName, object: nil)
+  }
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -59,6 +71,18 @@ class GameViewController: UIViewController {
       backgroundMusic?.play()
     } else {
       backgroundMusic?.stop()
+    }
+  }
+  
+  @objc func stopBackgroundMusic(_ info:Notification) {
+    if ACTPlayerStats.shared.getSound() {
+      backgroundMusic?.stop()
+    }
+  }
+  
+  @objc func startBackgroundMusic(_ info:Notification) {
+    if ACTPlayerStats.shared.getSound() {
+      backgroundMusic?.play()
     }
   }
   

@@ -10,6 +10,13 @@
 		C932F0421FDBC244002B5C30 /* ACTPlayerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932F0411FDBC244002B5C30 /* ACTPlayerStats.swift */; };
 		C932F0451FDBC35E002B5C30 /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C932F0431FDBC35E002B5C30 /* BackgroundMusic.mp3 */; };
 		C932F0461FDBC35E002B5C30 /* Tap.wav in Resources */ = {isa = PBXBuildFile; fileRef = C932F0441FDBC35E002B5C30 /* Tap.wav */; };
+		C93A08DA1FDD8A700017CA36 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A08D91FDD8A700017CA36 /* Chartboost.framework */; };
+		C93A08DD1FDD8A930017CA36 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A08DC1FDD8A930017CA36 /* StoreKit.framework */; };
+		C93A08DF1FDD8AA30017CA36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A08DE1FDD8AA30017CA36 /* Foundation.framework */; };
+		C93A08E11FDD8AAC0017CA36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A08E01FDD8AAC0017CA36 /* CoreGraphics.framework */; };
+		C93A08E31FDD8AB60017CA36 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A08E21FDD8AB60017CA36 /* WebKit.framework */; };
+		C93A08E51FDD8AC10017CA36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93A08E41FDD8AC10017CA36 /* UIKit.framework */; };
+		C93A08E71FDD8B0C0017CA36 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A08E61FDD8B0C0017CA36 /* Setup.swift */; };
 		C94668931FD181110068FCDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94668921FD181110068FCDD /* AppDelegate.swift */; };
 		C94668951FD181110068FCDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94668941FD181110068FCDD /* ViewController.swift */; };
 		C94668981FD181110068FCDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94668961FD181110068FCDD /* Main.storyboard */; };
@@ -28,6 +35,14 @@
 		C932F0411FDBC244002B5C30 /* ACTPlayerStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACTPlayerStats.swift; sourceTree = "<group>"; };
 		C932F0431FDBC35E002B5C30 /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic.mp3; sourceTree = "<group>"; };
 		C932F0441FDBC35E002B5C30 /* Tap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Tap.wav; sourceTree = "<group>"; };
+		C93A08D91FDD8A700017CA36 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
+		C93A08DC1FDD8A930017CA36 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C93A08DE1FDD8AA30017CA36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C93A08E01FDD8AAC0017CA36 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C93A08E21FDD8AB60017CA36 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		C93A08E41FDD8AC10017CA36 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C93A08E61FDD8B0C0017CA36 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
+		C93A08E81FDD8B8D0017CA36 /* AdventCalendarTutorials-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdventCalendarTutorials-Bridging-Header.h"; sourceTree = "<group>"; };
 		C946688F1FD181110068FCDD /* AdventCalendarTutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventCalendarTutorials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94668921FD181110068FCDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C94668941FD181110068FCDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,17 +64,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93A08E51FDD8AC10017CA36 /* UIKit.framework in Frameworks */,
+				C93A08E31FDD8AB60017CA36 /* WebKit.framework in Frameworks */,
+				C93A08E11FDD8AAC0017CA36 /* CoreGraphics.framework in Frameworks */,
+				C93A08DF1FDD8AA30017CA36 /* Foundation.framework in Frameworks */,
+				C93A08DD1FDD8A930017CA36 /* StoreKit.framework in Frameworks */,
+				C93A08DA1FDD8A700017CA36 /* Chartboost.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C93A08DB1FDD8A930017CA36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C93A08E41FDD8AC10017CA36 /* UIKit.framework */,
+				C93A08E21FDD8AB60017CA36 /* WebKit.framework */,
+				C93A08E01FDD8AAC0017CA36 /* CoreGraphics.framework */,
+				C93A08DE1FDD8AA30017CA36 /* Foundation.framework */,
+				C93A08DC1FDD8A930017CA36 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C94668861FD181110068FCDD = {
 			isa = PBXGroup;
 			children = (
 				C94668911FD181110068FCDD /* AdventCalendarTutorials */,
 				C94668901FD181110068FCDD /* Products */,
+				C93A08DB1FDD8A930017CA36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +108,7 @@
 		C94668911FD181110068FCDD /* AdventCalendarTutorials */ = {
 			isa = PBXGroup;
 			children = (
+				C93A08D91FDD8A700017CA36 /* Chartboost.framework */,
 				C932F0431FDBC35E002B5C30 /* BackgroundMusic.mp3 */,
 				C932F0441FDBC35E002B5C30 /* Tap.wav */,
 				C9C453D01FD98E2E00C90786 /* Bubblegum.ttf */,
@@ -90,6 +125,8 @@
 				C9C9572A1FD682BB00CFF9ED /* Gameplay.swift */,
 				C9C453CE1FD9408400C90786 /* BDButton.swift */,
 				C932F0411FDBC244002B5C30 /* ACTPlayerStats.swift */,
+				C93A08E61FDD8B0C0017CA36 /* Setup.swift */,
+				C93A08E81FDD8B8D0017CA36 /* AdventCalendarTutorials-Bridging-Header.h */,
 			);
 			path = AdventCalendarTutorials;
 			sourceTree = "<group>";
@@ -172,6 +209,7 @@
 				C9C9572B1FD682BB00CFF9ED /* Gameplay.swift in Sources */,
 				C94668AD1FD194980068FCDD /* MainMenu.swift in Sources */,
 				C94668951FD181110068FCDD /* ViewController.swift in Sources */,
+				C93A08E71FDD8B0C0017CA36 /* Setup.swift in Sources */,
 				C9C453CF1FD9408400C90786 /* BDButton.swift in Sources */,
 				C94668A51FD182120068FCDD /* GameViewController.swift in Sources */,
 				C94668931FD181110068FCDD /* AppDelegate.swift in Sources */,
@@ -316,10 +354,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R252PR8AVU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AdventCalendarTutorials",
+				);
 				INFOPLIST_FILE = AdventCalendarTutorials/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Rebeloper.AdventCalendarTutorials;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rebeloper/Desktop/YouTubeAdventCalendar/AdventCalendarTutorials/AdventCalendarTutorials/AdventCalendarTutorials-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -331,10 +374,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R252PR8AVU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AdventCalendarTutorials",
+				);
 				INFOPLIST_FILE = AdventCalendarTutorials/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Rebeloper.AdventCalendarTutorials;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rebeloper/Desktop/YouTubeAdventCalendar/AdventCalendarTutorials/AdventCalendarTutorials/AdventCalendarTutorials-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

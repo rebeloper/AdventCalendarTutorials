@@ -12,7 +12,14 @@ class MainMenu: SKScene {
   
   lazy var playButton: BDButton = {
     var button = BDButton(imageNamed: "ButtonPlay", buttonAction: {
-      ACTManager.shared.transition(self, toScene: .Gameplay, transition: SKTransition.moveIn(with: .right, duration: 0.5))
+      
+      let chance = CGFloat.random(1, max: 10)
+      if chance <= 5 {
+        self.showAds()
+      } else {
+        self.startGameplay()
+      }
+      
     })
     button.zPosition = 1
     return button
@@ -20,6 +27,9 @@ class MainMenu: SKScene {
   
   override func didMove(to view: SKView) {
     print("Inside Main Menu")
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(self.startGameplayNotification(_:)), name: startGameplayNotificationName, object: nil)
+    
     anchorPoint = CGPoint(x: 0.5, y: 0.5)
     playButton.position = CGPoint.zero
     addChild(playButton)
@@ -52,6 +62,29 @@ class MainMenu: SKScene {
 //    playButton.position = CGPoint.zero
 //    addChild(playButton)
 //  }
+  
+  @objc func startGameplayNotification(_ info:Notification) {
+    startGameplay()
+  }
+  
+  func startGameplay() {
+    ACTManager.shared.transition(self, toScene: .Gameplay, transition: SKTransition.moveIn(with: .right, duration: 0.5))
+
+  }
+  
+  func showAds() {
+    if !ACTPlayerStats.shared.getNoAds() {
+      if !Chartboost.hasInterstitial(CBLocationMainMenu) {
+        Chartboost.cacheInterstitial(CBLocationMainMenu)
+        startGameplay()
+      } else {
+        Chartboost.showInterstitial(CBLocationMainMenu)
+        Chartboost.cacheInterstitial(CBLocationMainMenu)
+      }
+    } else {
+      startGameplay()
+    }
+  }
   
 }
 

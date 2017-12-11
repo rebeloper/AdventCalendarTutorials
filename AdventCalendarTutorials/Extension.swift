@@ -64,6 +64,14 @@ public extension CGFloat {
       return size * 1.0
     }
   }
+  
+  public static func random() -> CGFloat {
+    return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
+  }
+  
+  public static func random(_ min: CGFloat, max: CGFloat) -> CGFloat {
+    return CGFloat.random() * (max - min) + min
+  }
 }
 
 

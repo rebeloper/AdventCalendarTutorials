@@ -12,6 +12,7 @@ import SpriteKit
 let kBackgroundMusicName = "BackgroundMusic"
 let kBackgroundMusicExtension = "mp3"
 let kSoundState = "kSoundState"
+let kNoAdsState = "kNoAdsState"
 
 enum SoundFileName: String {
   case TapFile = "Tap.wav"
@@ -30,4 +31,21 @@ class ACTPlayerStats {
   func getSound() -> Bool {
     return UserDefaults.standard.bool(forKey: kSoundState)
   }
+  
+  func setNoAds(_ state: Bool) {
+    UserDefaults.standard.set(state, forKey: kNoAdsState)
+    UserDefaults.standard.synchronize()
+  }
+  
+  func getNoAds() -> Bool {
+    return UserDefaults.standard.bool(forKey: kNoAdsState)
+  }
+  
 }
+
+
+
+
+
+
+
