@@ -29,13 +29,29 @@ class Gameplay: SKScene {
     label.color = SKColor.white
     label.horizontalAlignmentMode = .left
     label.verticalAlignmentMode = .center
-    label.text = "\(counterStartValue)"
+    label.text = "00:00"
     return label
   }()
   
   var counter = 0
   var counterTimer = Timer()
-  var counterStartValue = 60
+  var counterStartValue = 90
+  
+  var isGameOver = false
+  
+  lazy var scoreLabel: SKLabelNode = {
+    var label = SKLabelNode(fontNamed: "BubbleGum")
+    label.fontSize = CGFloat.universalFont(size: 36)
+    label.zPosition = 2
+    label.color = SKColor.white
+    label.horizontalAlignmentMode = .right
+    label.verticalAlignmentMode = .center
+    label.text = "\(scoreStartValue)"
+    return label
+  }()
+  
+  var score = 0
+  var scoreStartValue = 6
   
   override func didMove(to view: SKView) {
     print("Inside Gameplay")
@@ -43,30 +59,83 @@ class Gameplay: SKScene {
     backButton.position = CGPoint(x: ScreenSize.width * 0.2, y: ScreenSize.heigth * 0.85)
     addChild(backButton)
     
-    countdownLabel.position = CGPoint(x: ScreenSize.width * 0.2, y: ScreenSize.heigth * 0.79)
+    countdownLabel.position = CGPoint(x: ScreenSize.width * 0.06, y: ScreenSize.heigth * 0.79)
     addChild(countdownLabel)
+    
+    scoreLabel.position = CGPoint(x: ScreenSize.width * 0.94, y: ScreenSize.heigth * 0.79)
+    addChild(scoreLabel)
     
     counter = counterStartValue
     startCounter()
+    
+    score = scoreStartValue
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//    for touch in touches {
-//      if touch == touches.first {
-//        print("Going to Main Menu scene")
-//
-//      }
-//    }
+    for touch in touches {
+      if touch == touches.first {
+        print("Tapped")
+        
+        if !isGameOver {
+          score -= 1
+          updateScore()
+        }
+        
+        if score <= 0 {
+          isGameOver = true
+          gameOver(won: true)
+        }
+      }
+    }
   }
   
   func startCounter() {
     counterTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(decrementCounter), userInfo: nil, repeats: true)
   }
   
-  @objc func decrementCounter() {
-    counter -= 1
-    countdownLabel.text = "\(counter)"
+  func stopCounter() {
+    counterTimer.invalidate()
   }
+  
+  @objc func decrementCounter() {
+    
+    if !isGameOver {
+      
+      if counter <= 1 {
+        stopCounter()
+        isGameOver = true
+        gameOver(won: false)
+      }
+      
+      counter -= 1
+      //countdownLabel.text = "\(counter)"
+      
+      let minutes = counter / 60
+      let seconds = counter % 60
+      let minutesText = minutes < 10 ? "0\(minutes)" : "\(minutes)"
+      let secondsText = seconds < 10 ? "0\(seconds)" : "\(seconds)"
+      
+//      if minutes < 10 {
+//        minutesText = "0\(minutes)"
+//      }
+//
+//      if seconds < 10 {
+//        secondsText = "0\(seconds)"
+//      }
+      
+      countdownLabel.text = "\(minutesText):\(secondsText)"
+      
+    }
+  }
+  
+  func updateScore() {
+    scoreLabel.text = "\(score)"
+  }
+  
+  func gameOver(won: Bool) {
+    print("Game Over with status: \(won)")
+  }
+  
 }
 
 
