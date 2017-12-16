@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import StoreKit
 
 class Gameplay: SKScene {
   
@@ -134,6 +135,11 @@ class Gameplay: SKScene {
   
   func gameOver(won: Bool) {
     print("Game Over with status: \(won)")
+    
+    if won {
+      SKStoreReviewController.requestReview()
+    }
+    
   }
   
 }

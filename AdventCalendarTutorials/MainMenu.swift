@@ -25,6 +25,32 @@ class MainMenu: SKScene {
     return button
   }()
   
+  lazy var rateButton: BDButton = {
+    //    var button = BDButton(imageNamed: "ButtonBlue", buttonAction: {
+    //      ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+    //    })
+    var button = BDButton(imageNamed: "ButtonBlue", title: "Rate Me", buttonAction: {
+      self.handleRateMeButton()
+    })
+    button.zPosition = 1
+    button.scaleTo(screenWithPercentage: 0.25)
+    button.titleLabel?.fontSize = CGFloat.universalFont(size: 18)
+    return button
+  }()
+  
+  func handleRateMeButton() {
+    if let url = URL(string: "https://itunes.apple.com/app/id1326051586?action=write-review/") {
+      UIApplication.shared.open(url, options: [:], completionHandler: { (result) in
+        if result {
+          print("Success")
+        } else {
+          print("Failed")
+        }
+      })
+      
+    }
+  }
+  
   override func didMove(to view: SKView) {
     print("Inside Main Menu")
     
@@ -35,6 +61,10 @@ class MainMenu: SKScene {
     addChild(playButton)
     //addPlayButton()
     playButton.logAvailableFonts()
+    
+    rateButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.2)
+    addChild(rateButton)
+    
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
