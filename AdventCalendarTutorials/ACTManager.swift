@@ -75,6 +75,22 @@ class ACTManager {
     
   }
   
+  func share(on scene: SKScene, text: String, image: UIImage?, exculdeActivityTypes: [UIActivityType] ) {
+    // text to share
+    //let text = "This is some text that I want to share."
+    guard let image = UIImage(named: "ButtonPlay") else {return}
+    // set up activity view controller
+    let shareItems = [ text, image ] as [Any]
+    let activityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+    activityViewController.popoverPresentationController?.sourceView = scene.view // so that iPads won't crash
+    
+    // exclude some activity types from the list (optional)
+    activityViewController.excludedActivityTypes = exculdeActivityTypes
+    
+    // present the view controller
+    scene.view?.window?.rootViewController?.present(activityViewController, animated: true, completion: nil)
+  }
+  
 }
 
 
