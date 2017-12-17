@@ -16,12 +16,23 @@ class Gameplay: SKScene {
 //      ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
 //    })
     var button = BDButton(imageNamed: "ButtonBlue", title: "Back", buttonAction: {
-      ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+      self.showAlert()
     })
     button.zPosition = 1
     button.scaleTo(screenWithPercentage: 0.25)
     return button
   }()
+  
+  func showAlert() {
+    let okAction = UIAlertAction(title: "Ok", style: .default) { (result) in
+      print("Ok button tapped.")
+      ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
+    }
+    ACTManager.shared.showAlert(on: self, title: "Going Back", message: "You are leaving Gameplay.", preferredStyle: .alert, actions: [okAction], animated: true, delay: 3.0) {
+      print("Showed alert.")
+    }
+    
+  }
   
   lazy var countdownLabel: SKLabelNode = {
     var label = SKLabelNode(fontNamed: "BubbleGum")

@@ -61,6 +61,20 @@ class ACTManager {
     }
   }
   
+  func showAlert(on scene: SKScene, title: String, message: String, preferredStyle: UIAlertControllerStyle = .alert, actions: [UIAlertAction], animated: Bool = true, delay: Double = 0.0, completion: (() -> Swift.Void)? = nil) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
+    
+    for action in actions {
+      alert.addAction(action)
+    }
+    
+    let wait = DispatchTime.now() + delay
+    DispatchQueue.main.asyncAfter(deadline: wait) {
+      scene.view?.window?.rootViewController?.present(alert, animated: animated, completion: completion)
+    }
+    
+  }
+  
 }
 
 
