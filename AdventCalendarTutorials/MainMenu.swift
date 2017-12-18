@@ -44,10 +44,17 @@ class MainMenu: SKScene {
     playButton.position = CGPoint.zero
     addChild(playButton)
     //addPlayButton()
-    playButton.logAvailableFonts()
+    //playButton.logAvailableFonts()
+    
+//    let fadeButtonOut = SKAction.fadeOut(withDuration: 5.0)
+//    playButton.run(fadeButtonOut)
     
     settingsButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.1)
     addChild(settingsButton)
+    
+    playButton.button.popUp()
+    settingsButton.button.popUp(after: 1.0, sequenceNumber: 2)
+    
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
