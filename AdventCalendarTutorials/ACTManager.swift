@@ -27,6 +27,7 @@ class ACTManager {
       
       print("This is our first launch")
       ACTPlayerStats.shared.setSounds(true)
+      ACTPlayerStats.shared.saveMusicVolume(0.7)
       
       UserDefaults.standard.set(true, forKey: "isFirstLaunch")
       UserDefaults.standard.synchronize()

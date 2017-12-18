@@ -15,6 +15,7 @@ let kSoundState = "kSoundState"
 let kNoAdsState = "kNoAdsState"
 let kScore = "kScore"
 let kBestScore = "kBestScore"
+let kMusicVolume = "kMusicVolume"
 
 enum SoundFileName: String {
   case TapFile = "Tap.wav"
@@ -64,6 +65,15 @@ class ACTPlayerStats {
   
   func getNoAds() -> Bool {
     return UserDefaults.standard.bool(forKey: kNoAdsState)
+  }
+  
+  func saveMusicVolume(_ value: Float) {
+    UserDefaults.standard.set(value, forKey: kMusicVolume)
+    UserDefaults.standard.synchronize()
+  }
+  
+  func getMusicVolume() -> Float {
+    return UserDefaults.standard.float(forKey: kMusicVolume)
   }
   
 }

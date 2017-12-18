@@ -15,6 +15,8 @@ let startBackgroundMusicNotificationName = Notification.Name("startBackgroundMus
 
 let startGameplayNotificationName = Notification.Name("startGameplayNotificationName")
 
+let setMusicVolumeNotificationName = Notification.Name("setMusicVolumeNotificationName")
+
 class GameViewController: UIViewController {
   
   let skView: SKView = {
@@ -54,11 +56,14 @@ class GameViewController: UIViewController {
     skView.ignoresSiblingOrder = true
     
     playStopBackgroundMusic()
+    let info = ["volume": ACTPlayerStats.shared.getMusicVolume()]
+    NotificationCenter.default.post(name: setMusicVolumeNotificationName, object: nil, userInfo: info)
   }
   
   func addNotificationObservers() {
     NotificationCenter.default.addObserver(self, selector: #selector(self.stopBackgroundMusic(_:)), name: stopBackgroundMusicNotificationName, object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(self.startBackgroundMusic(_:)), name: startBackgroundMusicNotificationName, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(self.setMusicVolume(_:)), name: setMusicVolumeNotificationName, object: nil)
   }
   
   override func didReceiveMemoryWarning() {
@@ -84,6 +89,16 @@ class GameViewController: UIViewController {
     if ACTPlayerStats.shared.getSound() {
       backgroundMusic?.play()
     }
+  }
+  
+  @objc func setMusicVolume(_ info:Notification) {
+    guard let userInfo = info.userInfo else {return}
+    let volume = userInfo["volume"] as! Float
+    setBackgroundMusicVolume(to: volume)
+  }
+  
+  func setBackgroundMusicVolume(to volume: Float) {
+    backgroundMusic?.volume = volume
   }
   
 }
