@@ -25,48 +25,15 @@ class MainMenu: SKScene {
     return button
   }()
   
-  lazy var rateButton: BDButton = {
-    //    var button = BDButton(imageNamed: "ButtonBlue", buttonAction: {
-    //      ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
-    //    })
-    var button = BDButton(imageNamed: "ButtonBlue", title: "Rate Me", buttonAction: {
-      self.handleRateMeButton()
+  lazy var settingsButton: BDButton = {
+    var button = BDButton(imageNamed: "ButtonSettings", buttonAction: {
+      ACTManager.shared.transition(self, toScene: .Settings, transition: SKTransition.moveIn(with: .left, duration: 0.5))
     })
+    
+    button.scaleTo(screenWithPercentage: 0.17)
     button.zPosition = 1
-    button.scaleTo(screenWithPercentage: 0.25)
-    button.titleLabel?.fontSize = CGFloat.universalFont(size: 18)
     return button
   }()
-  
-  func handleRateMeButton() {
-    if let url = URL(string: "https://itunes.apple.com/app/id1326051586?action=write-review/") {
-      UIApplication.shared.open(url, options: [:], completionHandler: { (result) in
-        if result {
-          print("Success")
-        } else {
-          print("Failed")
-        }
-      })
-      
-    }
-  }
-  
-  lazy var shareButton: BDButton = {
-    //    var button = BDButton(imageNamed: "ButtonBlue", buttonAction: {
-    //      ACTManager.shared.transition(self, toScene: .MainMenu, transition: SKTransition.moveIn(with: .left, duration: 0.5))
-    //    })
-    var button = BDButton(imageNamed: "ButtonBlue", title: "Share", buttonAction: {
-      self.handleShareButton()
-    })
-    button.zPosition = 1
-    button.scaleTo(screenWithPercentage: 0.25)
-    button.titleLabel?.fontSize = CGFloat.universalFont(size: 18)
-    return button
-  }()
-  
-  func handleShareButton() {
-    ACTManager.shared.share(on: self, text: "This is my first share inside a SpriteKit game.", image: UIImage(named: "ButtonPlay"), exculdeActivityTypes: [.airDrop, .postToFacebook])
-  }
   
   override func didMove(to view: SKView) {
     print("Inside Main Menu")
@@ -79,12 +46,8 @@ class MainMenu: SKScene {
     //addPlayButton()
     playButton.logAvailableFonts()
     
-    rateButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.2)
-    addChild(rateButton)
-    
-    shareButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.3)
-    addChild(shareButton)
-    
+    settingsButton.position = CGPoint(x: ScreenSize.width * 0.0, y: ScreenSize.heigth * -0.1)
+    addChild(settingsButton)
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
