@@ -81,6 +81,35 @@ class Gameplay: SKScene {
     startCounter()
     
     score = scoreStartValue
+    
+    addSwipeGestureRecognizers()
+    
+  }
+  
+  func addSwipeGestureRecognizers() {
+    let gestureDirections: [UISwipeGestureRecognizerDirection] = [.up, .right, .down, .left]
+    for gestureDirection in gestureDirections {
+      let gestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
+      gestureRecognizer.direction = gestureDirection
+      self.view?.addGestureRecognizer(gestureRecognizer)
+    }
+  }
+  
+  @objc func handleSwipe(gesture: UIGestureRecognizer) {
+    if let gesture = gesture as? UISwipeGestureRecognizer {
+      switch gesture.direction {
+      case .up:
+        print("Swiped up")
+      case .right:
+        print("Swiped right")
+      case .down:
+        print("Swiped down")
+      case .left:
+        print("Swiped left")
+      default:
+        print("No such gesture")
+      }
+    }
   }
   
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

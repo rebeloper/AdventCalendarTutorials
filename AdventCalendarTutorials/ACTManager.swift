@@ -81,7 +81,7 @@ class ACTManager {
   func share(on scene: SKScene, text: String, image: UIImage?, exculdeActivityTypes: [UIActivityType] ) {
     // text to share
     //let text = "This is some text that I want to share."
-    guard let image = UIImage(named: "ButtonPlay") else {return}
+    guard let image = image else {return}
     // set up activity view controller
     let shareItems = [ text, image ] as [Any]
     let activityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
